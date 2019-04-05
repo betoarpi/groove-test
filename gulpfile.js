@@ -77,7 +77,11 @@ gulp.task(
 gulp.task(
 	'watch', function() {
 
-		gulp.watch( 'css/sass/**/*.scss', ['sass'] );
+		gulp.watch( 'css/sass/**/*.scss', ['sass'], function (e) {
+			gulp.src(e.path)
+				.pipe(wait(1500))
+				.pipe(refresh(server));
+		});
 
 		gulp.watch( 'js/**/*.js', ['js'] );
 
