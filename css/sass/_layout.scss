@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: $color-bg-main;
+  margin: 0;
+  color: $color-text-font;
+  font-size: 16px;
+  min-height: 100vh;
+  position: relative;
+  ::-moz-selection { 
+    background: $color-btn-blue;
+    color: white; 
+  }
+  ::selection { 
+    background: $color-btn-blue;
+    color: white;
+  }
+}
