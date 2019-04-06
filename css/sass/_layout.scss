@@ -4,14 +4,20 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body {
-  background: $color-bg-main;
+  background: $color-bg-card;
   color: $color-txt-font;
   font-size: 16px;
+  @include Graphik-Regular();
   margin: 0;
   min-height: 100vh;
   position: relative;
+  padding-top: 1em;
   ::-moz-selection { 
     background: $color-btn-blue;
     color: white; 
@@ -19,5 +25,139 @@ body {
   ::selection { 
     background: $color-btn-blue;
     color: white;
+  }
+}
+
+h1 {
+  width: 343px;
+  height: 45px;
+  font-size: 38px;
+  @include Walsheim-Bold();
+  line-height: 1.18;
+  letter-spacing: normal;
+  color: $color-txt-title;
+  margin: 0 0 8px 0;
+}
+
+h2 {
+  @include Walsheim-Bold;
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: normal;
+  color: $color-txt-title;
+  margin: 0 0 8px 0;
+}
+
+h3 {
+  margin: 0 0 8px 0;
+}
+
+p {
+  font-size: 1em;
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: $color-btn-blue;
+  &:hover {
+    color: $color-btn-hover;
+  }
+  &:active {
+    color: $color-btn-active;
+  }
+  &:focus {
+    color: $color-btn-active;
+  }
+}
+
+.btn, button {
+  cursor: pointer;
+  float: left;
+  min-height: 40px;
+  border-radius: 4px;
+  background-color: $color-btn-blue;
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: background 0.25s ease-in-out;
+  @include Walsheim-Regular;
+  line-height: 1.5;
+  &:hover {
+    background: $color-btn-hover;
+    color: white;
+  }
+  &:active {
+    background: $color-btn-active;
+    color: white;
+  }
+  &:visited, &:link {
+    color: white;
+  }
+}
+
+button {
+  border: none;
+}
+
+input, textarea, select {
+  border-radius: 4px;
+  border: solid 1px $color-border;
+  background-color:white;
+  padding: 0.5em 1em;
+  @include Graphik-Regular();
+  font-size: 1em;
+  color: $color-txt-title;
+  &:focus {
+    border-color: $color-btn-blue;
+    color: $color-txt-title;
+    outline: none;
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+}
+
+::placeholder {
+  color: $color-txt-font;
+  opacity: 0.6;
+}
+
+select {
+  color: $color-txt-font;
+  opacity: 0.6;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.select-container {
+  @include Graphik-Regular();
+  background-color:white;
+  border-radius: 4px;
+  border: solid 1px $color-border;
+  color: $color-txt-title;
+  float: left;
+  position: relative;
+  width: 100%;
+  select {
+    background: transparent;
+    border: none;
+    position: relative;
+    z-index: 1;
+  }
+  &:after {
+    border-bottom: 2px solid $color-txt-font;
+    border-left: 2px solid $color-txt-font;
+    content: "";
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    transform: rotate(-45deg);
+    transition: -webkit-transform .2s ease-out;
+    transition: transform .2s ease-out;
+    width: 8px;
+    z-index: 0;
   }
 }

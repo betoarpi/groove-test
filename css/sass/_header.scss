@@ -3,15 +3,17 @@
   margin: 0 auto;
   max-width: 1141px;
   justify-content: space-between;
+  padding: 0 1em;
 
   .groove-logo {
     display: flex;
-    flex: 0 1 200px;
-    background: gray;
+    flex: 0 0 106px;
+    margin: 0 0 42px 0;
   }
 
   #main-nav {
-    display: flex;
+    display: none;
+    /* display: flex;
     flex: 0 1 380px;
     ul {
       text-align: center;
@@ -19,11 +21,12 @@
         display: inline;
         list-style: none;
       }
-    }
+    } */
   }
 
   #login-nav {
-    display: flex;
-    flex: 0 1 200px;
+    display: none;
+    /* display: flex;
+    flex: 0 1 200px; */
   }
 }

@@ -49,42 +49,42 @@
   font-stretch: normal
 }
 
-.Graphik-Medium {
+@mixin Graphik-Medium {
   font-family: "Graphik-Medium";
   font-weight: 500;
   font-style: normal;
   font-stretch: normal
 }
 
-.Graphik-Regular {
+@mixin Graphik-Regular {
   font-family: "Graphik-Regular";
   font-weight: 400;
   font-style: normal;
   font-stretch: normal
 }
 
-.Graphik-Light {
+@mixin Graphik-Light {
   font-family: "Graphik-Light";
   font-weight: 300;
   font-style: normal;
   font-stretch: normal
 }
 
-.Walsheim-Bold {
+@mixin Walsheim-Bold {
   font-family: "Walsheim-Bold";
   font-weight: 700;
   font-style: normal;
   font-stretch: normal
 }
 
-.Walsheim-Medium {
+@mixin Walsheim-Medium {
   font-family: "Walsheim-Medium";
   font-weight: 500;
   font-style: normal;
   font-stretch: normal
 }
 
-.Walsheim-Regular {
+@mixin Walsheim-Regular {
   font-family: "Walsheim-Regular";
   font-weight: 400;
   font-style: normal;

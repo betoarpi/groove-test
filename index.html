@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
   <title>Groove Test Rob</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <header id="header">
-    <a href="#" class="groove-logo">
-      <img src="" alt="">
+    <a href="https://www.groovehq.com/" class="groove-logo">
+      <img src="img/header-logo.svg" alt="Groove Logo">
     </a>
     <!-- //logo -->
 
@@ -33,23 +35,28 @@
   <!-- //header -->
 
   <section class="jumbotron">
-      <h1>Get in touch</h1>
-      <p>Explore our <a href="">Knowledge Base</a>, <a href="">Book a Demo</a> or contact our support team directly via email.</p>
+    <h1>Get in touch</h1>
+    <p>Explore our <a href="">Knowledge Base</a>, <a href="">Book a Demo</a> or contact our support team directly via
+      email.</p>
   </section>
   <!-- //jumbotron -->
 
   <section class="contact-grid">
     <article class="grid-item grid-card knowledge-base">
-      <h3>Learn from our Knowledge Base</h3>
-      <p>Explore our Knowledge Base, Book a Demo or contact our support team directly via email.</p>
-      <a href="#" class="btn btn-blue">Explore Knowledge Base</a>
+      <div class="grid-item-content">
+        <h2>Learn from our Knowledge Base</h2>
+        <p>Explore our Knowledge Base, Book a Demo or contact our support team directly via email.</p>
+        <a href="#" class="btn btn-blue">Explore Knowledge Base</a>
+      </div>
     </article>
     <!-- //knowledge base -->
 
     <article class="grid-item grid-card grand-tour">
-      <h3>Take the grand tour</h3>
-      <p>Let Lisa and her team of customer success experts show you how Groove can simplify your support .</p>
-      <a href="#" class="btn btn-blue"></a>
+      <div class="grid-item-content">
+        <h2>Take the grand tour</h2>
+        <p>Let Lisa and her team of customer success experts show you how Groove can simplify your support .</p>
+        <a href="#" class="btn btn-blue">Book a Demo</a>
+      </div>
     </article>
     <!-- //grand tour -->
 
@@ -61,42 +68,46 @@
     <!-- //hummingbird -->
 
     <article class="grid-item grid-card contact-us">
-      <h3>Contact us</h3>
-      <form class="contact-us-form" action="">
-        <div class="form-row">
-          <label for="email">Email Address</label>
-          <input type="email" name="email" id="contact-email" placeholder="Enter your work email address">
-        </div>
-        <div class="form-row">
-          <label for="full-name">Full name</label>
-          <input type="text" name="full-name" id="contact-name" placeholder="Enter your name and surname">
-        </div>
-        <div class="form-row">
-          <label for="topic">Select a topic</label>
-          <select name="topic" id="contact-topic">
-            <option value="No topic selected" selected>- Please select -</option>
-            <option value="Client Support">Client Support</option>
-            <option value="Job Application">Job Application</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="message">Your message</label>
-          <textarea name="message" id="contact-message" cols="30" rows="10" placeholder="Your message"></textarea>
-        </div>
-        <div class="form-row">
-          <button type="submit">Send email</button>
-        </div>
-      </form>
+      <div class="grid-item-content">
+        <h2>Contact us</h2>
+        <form class="contact-us-form" action="">
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="contact-email" placeholder="Enter your work email address">
+          </div>
+          <div class="form-row">
+            <label for="full-name">Full name</label>
+            <input type="text" name="full-name" id="contact-name" placeholder="Enter your name and surname">
+          </div>
+          <div class="form-row">
+            <label for="topic">Select a topic</label>
+            <div class="select-container">
+              <select name="topic" id="contact-topic">
+                <option value="No topic selected" selected>- Please select -</option>
+                <option value="Client Support">Client Support</option>
+                <option value="Job Application">Job Application</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="message">Your message</label>
+            <textarea name="message" id="contact-message" cols="30" rows="10" placeholder="Your message"></textarea>
+          </div>
+          <div class="form-row">
+            <button type="submit">Send email</button>
+          </div>
+        </form>
+      </div>
     </article>
     <!-- //contact us -->
   </section>
   <!-- //contact grid -->
-  
-  <footer>
+
+  <footer class="footer">
     <div class="groove-logo">
-      <a href="#" class="groove-logo">
-        <img src="" alt="">
+      <a href="https://www.groovehq.com/" class="groove-logo">
+        <img src="img/footer-logo.svg" alt="Groove Logo">
       </a>
     </div>
     <!-- //logo -->
@@ -168,4 +179,5 @@
   </footer>
   <!-- //footer -->
 </body>
+
 </html>
