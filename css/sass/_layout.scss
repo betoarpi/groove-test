@@ -26,6 +26,11 @@ body {
     background: $color-btn-blue;
     color: white;
   }
+
+  @media screen and(min-width: 768px){
+    background: white url('../../img/mask-copy.svg') center top repeat-x;
+    background-size: 1320px auto;
+  }
 }
 
 h1 {
@@ -36,19 +41,23 @@ h1 {
   line-height: 1.18;
   letter-spacing: normal;
   color: $color-txt-title;
-  margin: 0 0 8px 0;
 }
 
 h2 {
   @include Walsheim-Bold;
-  font-size: 22px;
+  font-size: 1.375em;
   line-height: 1.18;
   letter-spacing: normal;
   color: $color-txt-title;
   margin: 0 0 8px 0;
+
+  @media screen and(min-width: 1024px) {
+    font-size: 1.625em;
+  }
 }
 
 h3 {
+  font-size: 1.25em;
   margin: 0 0 8px 0;
 }
 
@@ -59,39 +68,73 @@ p {
 
 a {
   color: $color-btn-blue;
+  text-decoration: none;
   &:hover {
     color: $color-btn-hover;
+    text-decoration: underline;
   }
   &:active {
     color: $color-btn-active;
+    text-decoration: underline;
   }
   &:focus {
     color: $color-btn-active;
+    text-decoration: underline;
   }
 }
 
-.btn, button {
+.btn,
+button {
   cursor: pointer;
   float: left;
   min-height: 40px;
   border-radius: 4px;
   background-color: $color-btn-blue;
+  border: 1px solid $color-btn-blue;
   color: white;
   padding: 0.5em 1em;
   text-decoration: none;
   transition: background 0.25s ease-in-out;
   @include Walsheim-Regular;
   line-height: 1.5;
+  font-size: 14px;
+
   &:hover {
     background: $color-btn-hover;
+    border: 1px solid $color-btn-hover;
     color: white;
+    text-decoration: none;
   }
+
   &:active {
     background: $color-btn-active;
+    border: 1px solid $color-btn-active;
     color: white;
+    text-decoration: none;
   }
-  &:visited, &:link {
+
+  &:visited,
+  &:link {
     color: white;
+    text-decoration: none;
+  }
+
+  &.btn-light {
+    background: white;
+    border: 1px solid $color-btn-blue;
+    color: $color-btn-blue;
+
+    &:hover {
+      border-color: $color-btn-hover;
+      color: $color-btn-hover;
+      text-decoration: none;
+    }
+
+    &:active, &:focus {
+      background: $color-btn-active;
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 

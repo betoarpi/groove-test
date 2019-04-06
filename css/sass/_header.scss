@@ -1,32 +1,78 @@
 #header {
+  align-content: center;
   display: flex;
-  margin: 0 auto;
-  max-width: 1141px;
   justify-content: space-between;
+  margin: 0 auto 42px auto;
+  max-width: 1141px;
   padding: 0 1em;
 
   .groove-logo {
     display: flex;
-    flex: 0 0 106px;
-    margin: 0 0 42px 0;
+    flex: 0 0 165px;
   }
 
   #main-nav {
+    align-self: center;
     display: none;
-    /* display: flex;
-    flex: 0 1 380px;
+    flex: 1 1 auto;
+    margin: 0 1.5em;
+
     ul {
+      align-items: center;
+      flex: 1 1 100%;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
       text-align: center;
+
       li {
-        display: inline;
+        align-self: center;
+        display: inline-flex;
         list-style: none;
+        margin: 0 1.5em;
+
+        a {
+          @include Walsheim-Medium();
+          color: $color-txt-font;
+          transition: color 0.25s ease-in-out;
+
+          &:link,
+          &:visited {
+            color: $color-txt-font;
+            text-decoration: none;
+          }
+
+          &:hover {
+            color: $color-txt-title;
+            text-decoration: none;
+          }
+        }
       }
-    } */
+    }
+
+    @media screen and(min-width: 1024px) {
+      display: flex;
+    }
   }
 
   #login-nav {
     display: none;
-    /* display: flex;
-    flex: 0 1 200px; */
+    flex: 0 0 165px;
+
+    a {
+      align-self: flex-start;
+      font-size: 13px;
+      line-height: 1.85;
+      min-height: initial;
+      padding: 0.25em 1em;
+
+      &:first-child {
+        margin-right: 1.5em;
+      }
+    }
+
+    @media screen and(min-width: 1024px) {
+      display: flex;
+    }
   }
 }

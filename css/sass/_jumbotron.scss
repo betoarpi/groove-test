@@ -1,8 +1,17 @@
 .jumbotron {
-  display: flex;
-  max-width: 1141px;
-  margin: 0 auto;
-  text-align: center;
   flex-direction: column;
+  line-height: 1.5;
+  margin: 0 auto 2.5em auto;
+  max-width: 561px;
   padding: 0 1em;
+  text-align: center;
+
+  h1 {
+    margin: 0 auto 0.5em auto;
+  }
+
+  @media screen and(min-width: 1024px) {
+    font-size: 1.125em;
+    margin-bottom: 5em;
+  }
 }
