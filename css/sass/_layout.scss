@@ -161,3 +161,21 @@ select {
     z-index: 0;
   }
 }
+
+.arrow {
+  &:after {
+    border-bottom: 2px solid $color-txt-font;
+    border-left: 2px solid $color-txt-font;
+    content: "";
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    transform: rotate(-45deg);
+    transition: -webkit-transform .2s ease-out;
+    transition: transform .2s ease-out;
+    width: 8px;
+    z-index: 0;
+  }
+}

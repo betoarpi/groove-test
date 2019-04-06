@@ -2,4 +2,93 @@
   background: $color-txt-title;
   color: white;
   padding: 3.5em 1em 1em;
+  ul {
+    padding: 0;
+    margin: 0 0 1em 0;
+    li {
+      list-style: none;
+    }
+  }
+
+  a {
+    color: $color-footer-links;
+    text-decoration: none;
+    &:hover {
+      color: $color-btn-blue;
+    }
+  }
+
+  .groove-logo {
+    border-bottom: 2px solid $color-footer-links;
+    padding: 0 0 1em 0;
+    margin: 0 70px 3em 0;
+  }
+
+  .footer-col {
+    .col-title {
+      border: 1px solid $color-txt-font;
+      border-radius: 4px;
+      color: white;
+      &:hover {
+        border-color: $color-btn-blue;
+        a {
+          &:hover {
+            color: $color-btn-blue;
+          }
+          &:after {
+            border-color: $color-btn-blue;
+          }
+        }
+      }
+
+      a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        padding: 10px 1em;
+        @extend .arrow;
+        transition: all 0.25s ease-in-out;
+        &:after {
+          border-color: white;
+          height: 10px;
+          width: 10px;
+          top: 15px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+
+    .footer-nav {
+      visibility: hidden;
+      height: 0;
+      &.active {
+        visibility: visible;
+        height: auto;
+      }
+      ul {
+        padding: 0 0 0 1em;
+        li {
+          font-size: 0.88em;
+          line-height: 2.29;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 1.5em;
+    ul {
+      li {
+        font-size: 0.88em;
+        margin-bottom: 1em;
+        &:last-child {
+          color: white;
+          margin-top: 2em;
+          font-size: 1.05em;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

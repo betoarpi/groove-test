@@ -17,6 +17,19 @@
       display: block;
     }
   }
+
+  .hummingbird {
+    background: white;
+    padding: 0;
+    figure {
+      display: block;
+      margin: 0 auto;
+      img {
+        width: 200px;
+      }
+    }
+  }
+
   .contact-us {
     form {
       float: left;
