@@ -48,7 +48,10 @@
 
   .footer-col {
     .col-title {
+      background: $color-txt-title;
       color: white;
+      position: relative;
+      z-index: 1;
       
       @media screen and(max-width: 767px) {
         border: 1px solid $color-txt-font;
@@ -95,17 +98,29 @@
           top: 15px;
           transform: rotate(-135deg);
         }
+        &.active-nav {
+          &:after {
+            transform: rotate(135deg);
+          }
+        }
       }
     }
 
     .footer-nav {
+      position: relative;
+      z-index: 0;
+      transition: max-height 0.2s ease-in-out;
       @media screen and(max-width: 767px) {
         visibility: hidden;
-        height: 0;
+        height: auto;
+        max-height: 0;
+        opacity: 0;
         
-        &.active {
+        &.active-nav {
           visibility: visible;
-          height: auto;
+          max-height: 200px;
+          flex: 1;
+          opacity: 1;
         }
       }
 
