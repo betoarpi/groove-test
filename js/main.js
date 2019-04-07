@@ -30,31 +30,35 @@ function showMenu(){
 }
 
 function removeClass(){
+  //debugger;
+  event.preventDefault();
   let existClass = document.querySelectorAll('.footer-nav');
   let arrowClass = document.querySelectorAll('.col-title a');
-  let classFlag = document.querySelectorAll('active-nav');
+  let classFlag = document.querySelectorAll('.col-title a.active-nav');
+  let targetClass = event.target.classList;
 
-  if (classFlag.length > 0) {
+  if (classFlag.length > 0 && targetClass.length == 1) {
+    //remove classes
+    for (var i = 0; i <= existClass.length; i++) {
+      if (existClass[i].classList.contains('active-nav')) {
+        existClass[i].classList.toggle('active-nav');
+        arrowClass[i].classList.toggle('active-nav');
+      } 
+    }
+  } else if (classFlag.length > 0) {
     for (var i = 0; i < existClass.length; i++) {
       if (existClass[i].classList.contains('active-nav')) {
         existClass[i].classList.toggle('active-nav');
         arrowClass[i].classList.toggle('active-nav');
       } 
     }
+    showMenu();
   } else {
     showMenu();
   }
 }
 
 /* Submit Button Function */
-/* $('.sendButton').attr('disabled',true);
-$('#message').keyup(function(){
-    if($(this).val().length !=0)
-        $('.sendButton').attr('disabled', false);            
-    else
-        $('.sendButton').attr('disabled',true);
-}) */
-
 function enableSendButton(){
   const $emailInput = document.getElementById('contact-email');
   const $sendButton = document.getElementById('submit');
