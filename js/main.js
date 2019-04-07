@@ -1,3 +1,4 @@
+/* Footer Menu Function */
 function showMenu(){
   event.preventDefault();
 
@@ -42,5 +43,24 @@ function removeClass(){
     }
   } else {
     showMenu();
+  }
+}
+
+/* Submit Button Function */
+/* $('.sendButton').attr('disabled',true);
+$('#message').keyup(function(){
+    if($(this).val().length !=0)
+        $('.sendButton').attr('disabled', false);            
+    else
+        $('.sendButton').attr('disabled',true);
+}) */
+
+function enableSendButton(){
+  const $emailInput = document.getElementById('contact-email');
+  const $sendButton = document.getElementById('submit');
+  if ($emailInput.value.length != 0) {
+    $sendButton.disabled = false;
+  } else {
+    $sendButton.disabled = true;
   }
 }
