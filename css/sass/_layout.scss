@@ -28,8 +28,19 @@ body {
   }
 
   @media screen and(min-width: 768px){
-    background: white url('../../img/mask-copy.svg') center top repeat-x;
-    background-size: 1320px auto;
+    background-color: white;
+    background-image: 
+      url('../../img/mask-copy.png'),
+      url('../../img/mask-copy.svg');
+    background-position: 
+      center top,
+      center top;
+    background-repeat: 
+      no-repeat,
+      repeat-x;
+    background-size: 
+      1500px auto,
+      1500px auto;
   }
 }
 
