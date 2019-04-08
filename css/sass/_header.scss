@@ -12,14 +12,14 @@
 
   .groove-logo {
     display: flex;
-    flex: 0 0 165px;
+    flex: 0 1 165px;
   }
 
   #main-nav {
     align-self: center;
     display: none;
     flex: 1 1 auto;
-    margin: 0 1.5em;
+    margin: 0 auto;
 
     ul {
       align-items: center;
@@ -33,7 +33,7 @@
         align-self: center;
         display: inline-flex;
         list-style: none;
-        margin: 0 1.5em;
+        margin: 0 1em;
 
         a {
           @include Walsheim-Medium();
@@ -54,7 +54,7 @@
       }
     }
 
-    @media screen and(min-width: 1024px) {
+    @media screen and(min-width: 768px) {
       display: flex;
     }
   }
@@ -75,7 +75,7 @@
       }
     }
 
-    @media screen and(min-width: 1024px) {
+    @media screen and(min-width: 768px) {
       display: flex;
     }
   }

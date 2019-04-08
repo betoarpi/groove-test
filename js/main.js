@@ -58,10 +58,12 @@ function removeClass(){
   }
 }
 
+
 /* Submit Button Function */
 function enableSendButton(){
   const $emailInput = document.getElementById('contact-email');
   const $sendButton = document.getElementById('submit');
+  
   if ($emailInput.value.length != 0) {
     $sendButton.disabled = false;
   } else {

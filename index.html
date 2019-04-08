@@ -73,7 +73,7 @@
         <form class="contact-us-form" action="mailto:hello@robarroyo.com" method="post" enctype="text/plain">
           <div class="form-row">
             <label for="email">Email Address</label>
-            <input type="email" name="email" id="contact-email" placeholder="Enter your work email address" required oninput="enableSendButton()">
+            <input type="text" name="email" id="contact-email" placeholder="Enter your work email address" required oninput="enableSendButton()">
           </div>
           <div class="form-row">
             <label for="full-name">Full name</label>
@@ -82,7 +82,7 @@
           <div class="form-row">
             <label for="topic">Select a topic</label>
             <div class="select-container">
-              <select name="topic" id="contact-topic">
+              <select name="topic" id="contact-topic" required>
                 <option value="No topic selected" selected>- Please select -</option>
                 <option value="Client Support">Client Support</option>
                 <option value="Job Application">Job Application</option>
