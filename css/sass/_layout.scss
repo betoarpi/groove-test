@@ -107,7 +107,7 @@ button {
   text-decoration: none;
   transition: background 0.25s ease-in-out;
   @include Walsheim-Regular;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 14px;
 
   &:hover {
@@ -155,7 +155,7 @@ button {
 }
 
 button {
-  border: none;
+  border: 1px solid #0f8da7;
   padding: calc(1em - 0.5px);
 }
 
